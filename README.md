@@ -13,4 +13,4 @@ https://github.com/mailchimp/Email-Blueprints
 
 Contributing
 ========
-Anyone with strong knowledge of html email coding can make a pull request for changes and improvements.
+Anyone with strong knowledge of html email coding can make a pull request for changes and improvements. Please always clarify and if possible share online resources to prove or view your suggestions.
