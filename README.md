@@ -8,6 +8,7 @@ Using MailChimp's html email template (blue-print) as the foundation, this templ
 Demo
 ========
 http://www.charlesmudy.com/respmail/
+![Preview](http://www.charlesmudy.com/respmail/image.png)
 
 Inspiration
 ========
