@@ -19,9 +19,22 @@ structure.
 ** Profile **
 Licensed under MIT (https://github.com/charlesmudy/Respmail/blob/master/LICENSE)
 Designed by Shina Charles Memud
-Respmail v1.1 (http://charlesmudy.com/respmail/)
+Respmail v1.2 (http://charlesmudy.com/respmail/)
 
+** Quick modification **
+We are using width of 500 for the whole content,
+you can change it any size you want (e.g. 600).
+The fastest and safest way is to use find & replace
+Sizes: [
+    wrapper   : '500',
+    columns   : '210',
+    x-columns : [
+            left : '90',
+            right: '350'
+        ]
+    }
 -->
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -32,8 +45,8 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
         <title>Respmail is a response HTML email designed to work on all major email platforms and smartphones</title>
         <style type="text/css">
             /* RESET STYLES */
-            html { background-color:#E1E1E1; margin:0!important; padding:0!important; }
-            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0!important; padding:0!important; width:100% !important;font-family:Helvetica, Arial, "Lucida Grande", sans-serif;}
+            html { background-color:#E1E1E1; margin:0; padding:0; }
+            body, #bodyTable, #bodyCell, #bodyCell{height:100% !important; margin:0; padding:0; width:100% !important;font-family:Helvetica, Arial, "Lucida Grande", sans-serif;}
             table{border-collapse:collapse;}
             table[id=bodyTable] {width:100%!important;margin:auto;max-width:500px!important;color:#7A7A7A;font-weight:normal;}
             img, a img{border:0; outline:none; text-decoration:none;height:auto; line-height:100%;}
@@ -64,8 +77,6 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
             #emailHeader{background-color:#E1E1E1;}
             #emailBody{background-color:#FFFFFF;}
             #emailFooter{background-color:#E1E1E1;}
-            .textContent, .textContentLast{color:#8B8B8B; font-family:Helvetica; font-size:16px; line-height:125%; text-align:Left;}
-            .textContent a, .textContentLast a{color:#205478; text-decoration:underline;}
             .nestedContainer{background-color:#F8F8F8; border:1px solid #CCCCCC;}
             .emailButton{background-color:#205478; border-collapse:separate;}
             .buttonContent{color:#FFFFFF; font-family:Helvetica; font-size:18px; font-weight:bold; line-height:100%; padding:15px; text-align:center;}
@@ -100,7 +111,12 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                     from rendering media query styles on
                     desktop.
                 */
-                table[id="emailHeader"], table[id="emailBody"], table[id="emailFooter"], table[class="flexibleContainer"] {width:100% !important;}
+                /*td[class="textContent"], td[class="flexibleContainerCell"] { width: 100%; padding-left: 10px !important; padding-right: 10px !important; }*/
+                table[id="emailHeader"],
+                table[id="emailBody"],
+                table[id="emailFooter"],
+                table[class="flexibleContainer"],
+                td[class="flexibleContainerCell"] {width:100% !important;}
                 td[class="flexibleContainerBox"], td[class="flexibleContainerBox"] table {display: block;width: 100%;text-align: left;}
                 /*
                     The following style rule makes any
@@ -110,7 +126,7 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                     to those images to prevent them
                     from blowing out.
                 */
-                td[class="imageContent"] img {height:auto !important; width:100% !important; max-width:100% !important;}
+                td[class="imageContent"] img {height:auto !important; width:100% !important; max-width:100% !important; }
                 img[class="flexibleImage"]{height:auto !important; width:100% !important;max-width:100% !important;}
                 img[class="flexibleImageSmall"]{height:auto !important; width:auto !important;}
 
@@ -338,8 +354,8 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
 
 
 							<!-- MODULE ROW // -->
-                            <!-- The "mc:hideable" is a feature for MailChimp which allows
-                                  you disable certain row. It works perfectly for structure.
+                            <!--  The "mc:hideable" is a feature for MailChimp which allows
+                                  you to disable certain row. It works perfectly for our row structure.
                                   http://kb.mailchimp.com/article/template-language-creating-editable-content-areas/
                             -->
 							<tr mc:hideable>
