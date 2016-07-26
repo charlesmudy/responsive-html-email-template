@@ -12,9 +12,9 @@ $ bower install respmail
 `````
 If you don't know what Bower is, read more about it here http://bower.io/
 
-Author
+Preview
 ========
-http://www.charlesmudy.com/
+Author: http://www.charlesmudy.com/
 ![Preview](http://www.charlesmudy.com/respmail/image.png)
 
 Inspiration
