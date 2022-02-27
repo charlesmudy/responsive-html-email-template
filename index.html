@@ -36,12 +36,13 @@ Sizes: [
 	-->
 
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-	<html xmlns="http://www.w3.org/1999/xhtml">
+	<html lang="en" xml:lang="en" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"> <!-- sets the language of the email, but as email clients often strip the <html> element it’s also important to set a lang on a body wrapping element -->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="format-detection" content="telephone=no" /> <!-- disable auto telephone linking in iOS -->
+		<meta name="x-apple-disable-message-reformatting"><!-- This meta tag prevents the Apple auto-scaling emails bug  -->
+		 <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no"> <!-- disable auto telephone, adress, email and date linking in iOS -->
 		<title>Respmail is a response HTML email designed to work on all major email platforms and smartphones</title>
 		<style type="text/css">
 			/* RESET STYLES */
@@ -206,7 +207,8 @@ Sizes: [
 			the email starts from this center, so we try to
 			apply necessary styling e.g. background-color.
 		-->
-		<center style="background-color:#E1E1E1;">
+		<!-- Accessibility enhancement on center tag : with a screen reader the article role will place the email into the landmarks menu and define the content as an article / Once we added a role to the email, the aria-roledescription lets us change the role by something more accurate / aria-label let us define a title for our content, this will be read by screenreaders when title tag is omitted / we also duplicate the langage and dir attribute in case it is removed by the email client -->
+		<center role="article" aria-roledescription="email" aria-label="email name" lang="en" dir="ltr" style="background-color:#E1E1E1;">
 			<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="table-layout: fixed;max-width:100% !important;width: 100% !important;min-width: 100% !important;">
 				<tr>
 					<td align="center" valign="top" id="bodyCell">
